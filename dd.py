@@ -37,7 +37,7 @@ for i in range(0,dfs.shape[0]):
 
 
 pool_sr = pd.Series(pool_ls)
-# st.write(pool_sr.value_counts())
+st.write(pool_sr.value_counts())
 
 
 dfsd = pd.DataFrame(pool_sr.value_counts())
@@ -60,7 +60,7 @@ chart = alt.Chart(dfsd).mark_bar().encode(
 st.altair_chart(chart,use_container_width=True)
 
 dfsd.drop('Diagnosis',axis = 1)
-st.write(dfsd)
+# st.write(dfsd)
 
 
 # st.bar_chart(dfsd,height=0)
